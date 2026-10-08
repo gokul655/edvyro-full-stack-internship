@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Internship Explorer</title>
+
+  <meta
+    name="description"
+    content="A responsive internship explorer with search and domain filters."
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">EDVYRO FULL STACK DEVELOPMENT</p>
+
+      <h1>Internship Explorer</h1>
+
+      <p class="subtitle">
+        Explore beginner-friendly internship opportunities by domain,
+        search term, and learning area.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section
+      class="controls"
+      aria-label="Internship search and filters"
+    >
+
+      <div class="field">
+        <label for="search">Search internships</label>
+
+        <input
+          id="search"
+          type="search"
+          placeholder="Search by title, company or skill..."
+          autocomplete="off"
+        >
+      </div>
+
+      <div class="field">
+        <label for="domain">Filter by domain</label>
+
+        <select id="domain">
+          <option value="all">All domains</option>
+          <option value="Full Stack Development">
+            Full Stack Development
+          </option>
+          <option value="Java Development">
+            Java Development
+          </option>
+          <option value="Frontend Development">
+            Frontend Development
+          </option>
+          <option value="AI & Machine Learning">
+            AI & Machine Learning
+          </option>
+          <option value="Cloud Computing">
+            Cloud Computing
+          </option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label class="sr-only" for="clearBtn">
+          Clear filters
+        </label>
+
+        <button
+          id="clearBtn"
+          class="secondary"
+          type="button"
+        >
+          Clear
+        </button>
+      </div>
+
+    </section>
+
+    <p id="status" class="status" aria-live="polite"></p>
+
+    <section aria-labelledby="resultsTitle">
+
+      <div class="results-heading">
+        <h2 id="resultsTitle">Available Internships</h2>
+
+        <span
+          id="count"
+          class="count"
+          aria-live="polite"
+        >
+          0 results
+        </span>
+      </div>
+
+      <div
+        id="cards"
+        class="cards"
+        aria-live="polite"
+      ></div>
+
+      <div
+        id="emptyState"
+        class="message hidden"
+        role="status"
+      >
+        <h3>No internships found</h3>
+
+        <p>
+          Try another search term or select a different domain.
+        </p>
+      </div>
+
+      <div
+        id="errorState"
+        class="message error hidden"
+        role="alert"
+      >
+        <h3>Something went wrong</h3>
+
+        <p>
+          We could not display the internship results.
+          Please refresh the page and try again.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        EdVyro Full Stack Development Internship Project
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
